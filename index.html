@@ -265,6 +265,12 @@
 
 <!-- HOME -->
 <section id="page-home">
+  <!-- Static links for Google crawler -->
+  <div style="text-align:center;padding:0.75rem;background:#111827;border-bottom:1px solid #1e2d45">
+    <a href="/privacy" style="color:#3b82f6;font-size:0.85rem;text-decoration:underline;margin:0 1rem">Privacy Policy</a>
+    <a href="/terms" style="color:#3b82f6;font-size:0.85rem;text-decoration:underline;margin:0 1rem">Terms of Service</a>
+    <a href="/support" style="color:#3b82f6;font-size:0.85rem;text-decoration:underline;margin:0 1rem">Support</a>
+  </div>
   <div class="hero">
     <div class="hero-glow"></div>
     <div class="hero-badge"><span></span> Invite-Only Access · Google Workspace Add-on</div>
@@ -279,13 +285,19 @@
     <div class="feature-card"><div class="feature-icon">📊</div><h3>Progress Tracking</h3><p>Real-time progress counter shows how many emails have been sent and how many remain. Get a notification when the batch completes.</p></div>
     <div class="feature-card"><div class="feature-icon">🎛️</div><h3>Flexible Send Modes</h3><p>Choose from Fast, Normal, Safe, or fully Custom delay modes depending on your list size and deliverability requirements.</p></div>
   </div>
+  <!-- Privacy links visible to Google crawler -->
+  <div style="text-align:center;padding:1rem 2rem 0;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap">
+    <a href="/privacy" style="color:#3b82f6;font-size:0.875rem;text-decoration:none" onclick="navigate('/privacy');return false;">Privacy Policy</a>
+    <a href="/terms" style="color:#3b82f6;font-size:0.875rem;text-decoration:none" onclick="navigate('/terms');return false;">Terms of Service</a>
+    <a href="/support" style="color:#3b82f6;font-size:0.875rem;text-decoration:none" onclick="navigate('/support');return false;">Support</a>
+  </div>
   <div class="company-section">
     <h2>About Truellion Technologies</h2>
     <p>We build focused, private productivity tools for Gmail™ and Google Workspace™ — designed for professionals who need control, reliability, and privacy.</p>
     <div class="contact-card">
       <div class="contact-row"><span class="contact-label">Company</span><span class="contact-value">Truellion Technologies</span></div>
       <div class="contact-row"><span class="contact-label">General</span><span class="contact-value"><a href="mailto:truellion2@gmail.com">truellion2@gmail.com</a></span></div>
-      <div class="contact-row"><span class="contact-label">Support</span><span class="contact-value"><a href="mailto:truellion2@gmail.com">truellion2@gmail.com</a></span></div>
+      <div class="contact-row"><span class="contact-label">Support</span><span class="contact-value"><a href="mailto:zaavian@truellion.com">zaavian@truellion.com</a></span></div>
       <div class="contact-row"><span class="contact-label">Product</span><span class="contact-value">AutoSend for Gmail™ — Google Workspace™ Add-on</span></div>
     </div>
   </div>
@@ -305,9 +317,9 @@
     <div class="legal-section"><h2>3. How We Use Your Information</h2><ul><li>Verifying your Gmail™ address is authorized to use the Add-on</li><li>Processing your email send queue with your configured time delays</li><li>Sending you a completion notification when your batch finishes</li><li>Providing customer support when you contact us</li></ul></div>
     <div class="legal-section"><h2>4. Data Storage & Infrastructure</h2><p>The Add-on is built entirely on Google's official cloud infrastructure. We do not operate external servers or databases.</p><ul><li>Whitelist stored in Google Sheets™ or Google Apps Script™ PropertiesService</li><li>Email queue stored temporarily in Apps Script™ PropertiesService — deleted after batch completion</li><li>Authentication handled entirely by Google OAuth 2.0™ — we never see or store your Google password</li></ul></div>
     <div class="legal-section"><h2>5. Data Sharing</h2><p>We do not sell, rent, trade, or share your personal information with any third parties. Your data only interacts with Google's own services (Gmail API™, Apps Script™), governed by Google's Privacy Policy.</p></div>
-    <div class="legal-section"><h2>6. Data Retention & Deletion</h2><p>Your Gmail address is retained only while your access is active. To request deletion, email <a href="mailto:truellion2@gmail.com" style="color:var(--accent2)">truellion2@gmail.com</a> with subject: <em>AutoSend Data Deletion Request</em>. We process requests within 7 business days. Uninstalling the Add-on also removes all locally stored data automatically.</p></div>
+    <div class="legal-section"><h2>6. Data Retention & Deletion</h2><p>Your Gmail address is retained only while your access is active. To request deletion, email <a href="mailto:zaavian@truellion.com" style="color:var(--accent2)">zaavian@truellion.com</a> with subject: <em>AutoSend Data Deletion Request</em>. We process requests within 7 business days. Uninstalling the Add-on also removes all locally stored data automatically.</p></div>
     <div class="legal-section"><h2>7. Google API Services User Data Policy</h2><p>The Add-on's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. We only request the minimum OAuth scopes necessary to perform email sending on your behalf.</p></div>
-    <div class="legal-section"><h2>8. Contact Us</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Data Deletion: truellion2@gmail.com</li></ul></div>
+    <div class="legal-section"><h2>8. Contact Us</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Data Deletion: zaavian@truellion.com</li></ul></div>
     <div class="legal-note"><p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p></div>
   </div>
 </section>
@@ -329,7 +341,7 @@
     <div class="legal-section"><h2>6. Limitation of Liability</h2><p>To the maximum extent permitted by law, Truellion Technologies shall not be liable for:</p><ul><li>Loss of data or emails</li><li>Gmail™ account suspension by Google</li><li>Financial losses from use or inability to use the service</li><li>Emails being marked as spam by recipient servers</li></ul></div>
     <div class="legal-section"><h2>7. Termination</h2><p>We reserve the right to revoke your access at any time for any violation of these Terms. Upon termination, all data associated with your account will be deleted.</p></div>
     <div class="legal-section"><h2>8. Changes to These Terms</h2><p>We may update these Terms from time to time. Continued use after changes constitutes acceptance of the revised Terms.</p></div>
-    <div class="legal-section"><h2>9. Contact Information</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Support: truellion2@gmail.com</li></ul></div>
+    <div class="legal-section"><h2>9. Contact Information</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Support: zaavian@truellion.com</li></ul></div>
     <div class="legal-note"><p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p></div>
   </div>
 </section>
@@ -342,19 +354,24 @@
       <h1>Support Center</h1>
       <p class="legal-meta">AutoSend for Gmail™ &nbsp;·&nbsp; Truellion Technologies &nbsp;·&nbsp; Response within 24–48 hours</p>
     </div>
-    <div class="legal-section"><h2>Contact Information</h2><ul><li>General inquiries: truellion2@gmail.com</li><li>Data deletion & privacy: truellion2@gmail.com</li><li>Response time: within 24–48 business hours</li></ul></div>
+    <div class="legal-section"><h2>Contact Information</h2><ul><li>General inquiries: truellion2@gmail.com</li><li>Data deletion & privacy: zaavian@truellion.com</li><li>Response time: within 24–48 business hours</li></ul></div>
     <div class="legal-section"><h2>How to Get Support</h2><p>Email truellion2@gmail.com with the following:</p><ul><li>Your Gmail™ address used with the Add-on</li><li>A clear description of the issue</li><li>Screenshots if applicable</li><li>Date and time when the issue occurred</li></ul></div>
     <div class="legal-section"><h2>AutoSend button not appearing in Gmail™?</h2><p>Complete the installation and approve all OAuth permissions. Refresh Gmail™ (press F5). If the issue persists, uninstall and reinstall the Add-on from Google Workspace Marketplace™.</p></div>
     <div class="legal-section"><h2>Emails going to spam?</h2><p>Use Safe Mode (5–10 minute delays) for large lists. Avoid spam trigger words in your subject or body. Start with small batches to build sender reputation.</p></div>
     <div class="legal-section"><h2>Access Denied message?</h2><p>Your Gmail™ address may not be on the authorized whitelist, or your access may have been revoked. Contact truellion2@gmail.com to verify your access status.</p></div>
     <div class="legal-section"><h2>Daily sending limits</h2><ul><li>Free Gmail™ accounts: 500 emails per day (Google's limit)</li><li>Google Workspace™ accounts: 2,000 emails per day (Google's limit)</li></ul></div>
-    <div class="legal-section"><h2>Data Opt-Out & Deletion Request</h2><p>To request removal of your data:</p><ul><li>Email: truellion2@gmail.com</li><li>Subject: AutoSend Data Deletion Request</li><li>Include: Your Gmail™ address and reason</li></ul><p>We will process your request within 7 business days. Uninstalling the Add-on also removes all Add-on data from Google's infrastructure automatically.</p></div>
+    <div class="legal-section"><h2>Data Opt-Out & Deletion Request</h2><p>To request removal of your data:</p><ul><li>Email: zaavian@truellion.com</li><li>Subject: AutoSend Data Deletion Request</li><li>Include: Your Gmail™ address and reason</li></ul><p>We will process your request within 7 business days. Uninstalling the Add-on also removes all Add-on data from Google's infrastructure automatically.</p></div>
     <div class="legal-note"><p>Gmail™ and Google Workspace™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with or endorsed by Google LLC.</p></div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Truellion Technologies · AutoSend for Gmail™<br>
+  <p>
+    <a onclick="navigate('/privacy')" style="color:var(--accent2);text-decoration:none;cursor:pointer;margin:0 0.75rem">Privacy Policy</a> ·
+    <a onclick="navigate('/terms')" style="color:var(--accent2);text-decoration:none;cursor:pointer;margin:0 0.75rem">Terms of Service</a> ·
+    <a onclick="navigate('/support')" style="color:var(--accent2);text-decoration:none;cursor:pointer;margin:0 0.75rem">Support</a>
+  </p>
+  <p style="margin-top:0.75rem">© 2025 Truellion Technologies · AutoSend for Gmail™<br>
   <small>Gmail™ and Google Workspace™ are trademarks of Google LLC. AutoSend for Gmail™ is not affiliated with, endorsed by, or sponsored by Google LLC.</small></p>
 </footer>
 
