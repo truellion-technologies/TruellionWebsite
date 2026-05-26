@@ -20,11 +20,8 @@
     --white: #ffffff;
     --green: #10b981;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
@@ -33,8 +30,6 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(10,15,30,0.92);
@@ -44,7 +39,6 @@
     height: 64px;
     display: flex; align-items: center; justify-content: space-between;
   }
-
   .nav-brand {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -52,8 +46,8 @@
     color: var(--white);
     text-decoration: none;
     display: flex; align-items: center; gap: 10px;
+    cursor: pointer;
   }
-
   .nav-logo {
     width: 32px; height: 32px;
     background: var(--accent);
@@ -61,12 +55,7 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 0.85rem; font-weight: 800; color: white;
   }
-
-  .nav-links {
-    display: flex; gap: 0.25rem;
-    list-style: none;
-  }
-
+  .nav-links { display: flex; gap: 0.25rem; list-style: none; }
   .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
@@ -75,23 +64,18 @@
     padding: 0.4rem 0.9rem;
     border-radius: 6px;
     transition: all 0.2s;
+    cursor: pointer;
   }
-
-  .nav-links a:hover {
+  .nav-links a:hover, .nav-links a.active-link {
     color: var(--white);
     background: var(--surface2);
   }
-
-  /* ── SECTIONS ── */
   section {
     display: none;
     min-height: 100vh;
     padding-top: 64px;
   }
-
   section.active { display: block; }
-
-  /* ── HOME HERO ── */
   .hero {
     position: relative;
     padding: 7rem 2rem 5rem;
@@ -100,7 +84,6 @@
     text-align: center;
     overflow: hidden;
   }
-
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--accent-glow);
@@ -112,14 +95,11 @@
     margin-bottom: 2rem;
     letter-spacing: 0.02em;
   }
-
   .hero-badge span { width: 6px; height: 6px; background: var(--green); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
-
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.3); }
   }
-
   h1 {
     font-family: 'Syne', sans-serif;
     font-size: clamp(2.8rem, 6vw, 4.5rem);
@@ -129,14 +109,12 @@
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
   }
-
   h1 em {
     font-style: normal;
     background: linear-gradient(135deg, #60a5fa, #2563eb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   .hero-sub {
     font-size: 1.15rem;
     color: var(--text-muted);
@@ -145,7 +123,6 @@
     font-weight: 300;
     line-height: 1.75;
   }
-
   .hero-glow {
     position: absolute;
     top: 10%; left: 50%;
@@ -154,8 +131,6 @@
     background: radial-gradient(ellipse, rgba(37,99,235,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
-
-  /* ── FEATURES ── */
   .features {
     max-width: 1000px;
     margin: 0 auto;
@@ -164,7 +139,6 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
   }
-
   .feature-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -174,7 +148,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .feature-card::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0; height: 2px;
@@ -182,14 +155,8 @@
     opacity: 0;
     transition: opacity 0.3s;
   }
-
-  .feature-card:hover {
-    border-color: rgba(37,99,235,0.4);
-    transform: translateY(-3px);
-  }
-
+  .feature-card:hover { border-color: rgba(37,99,235,0.4); transform: translateY(-3px); }
   .feature-card:hover::before { opacity: 1; }
-
   .feature-icon {
     width: 44px; height: 44px;
     background: var(--accent-glow);
@@ -199,523 +166,190 @@
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
   }
-
   .feature-card h3 {
     font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.6rem;
+    font-size: 1rem; font-weight: 700;
+    color: var(--white); margin-bottom: 0.6rem;
   }
-
-  .feature-card p {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    line-height: 1.65;
-  }
-
-  /* ── COMPANY SECTION ── */
+  .feature-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
   .company-section {
     max-width: 700px;
     margin: 0 auto;
     padding: 3rem 2rem 6rem;
     text-align: center;
   }
-
   .company-section h2 {
     font-family: 'Syne', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1rem;
+    font-size: 1.75rem; font-weight: 700;
+    color: var(--white); margin-bottom: 1rem;
   }
-
-  .company-section p {
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-  }
-
+  .company-section p { color: var(--text-muted); margin-bottom: 1rem; }
   .contact-card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 2rem;
-    margin-top: 2rem;
-    text-align: left;
+    padding: 2rem; margin-top: 2rem; text-align: left;
   }
-
   .contact-row {
     display: flex; align-items: center; gap: 1rem;
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--border);
   }
-
   .contact-row:last-child { border-bottom: none; }
-
   .contact-label {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    width: 120px;
-    flex-shrink: 0;
+    font-size: 0.8rem; color: var(--text-dim); font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    width: 120px; flex-shrink: 0;
   }
-
-  .contact-value {
-    color: var(--text);
-    font-size: 0.9rem;
-  }
-
-  .contact-value a {
-    color: var(--accent2);
-    text-decoration: none;
-  }
-
-  /* ── LEGAL PAGES ── */
-  .legal-wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 4rem 2rem 6rem;
-  }
-
-  .legal-header {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-  }
-
+  .contact-value { color: var(--text); font-size: 0.9rem; }
+  .contact-value a { color: var(--accent2); text-decoration: none; }
+  .legal-wrap { max-width: 760px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .legal-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
   .legal-tag {
     display: inline-block;
     background: var(--accent-glow);
     border: 1px solid rgba(37,99,235,0.25);
     color: var(--accent2);
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.75rem; font-weight: 600;
     padding: 0.25rem 0.75rem;
-    border-radius: 100px;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    border-radius: 100px; margin-bottom: 1rem;
+    text-transform: uppercase; letter-spacing: 0.08em;
   }
-
-  .legal-header h1 {
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 0.75rem;
-    text-align: left;
-  }
-
-  .legal-meta {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-  }
-
-  .legal-section {
-    margin-bottom: 2.5rem;
-  }
-
+  .legal-header h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 0.75rem; text-align: left; }
+  .legal-meta { color: var(--text-dim); font-size: 0.85rem; }
+  .legal-section { margin-bottom: 2.5rem; }
   .legal-section h2 {
     font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.75rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--accent);
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--white); margin-bottom: 0.75rem;
+    padding-left: 1rem; border-left: 3px solid var(--accent);
   }
-
-  .legal-section p {
-    color: var(--text-muted);
-    font-size: 0.925rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.75;
-  }
-
-  .legal-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0;
-  }
-
+  .legal-section p { color: var(--text-muted); font-size: 0.925rem; margin-bottom: 0.75rem; line-height: 1.75; }
+  .legal-section ul { list-style: none; padding: 0; margin: 0.5rem 0; }
   .legal-section ul li {
-    color: var(--text-muted);
-    font-size: 0.925rem;
+    color: var(--text-muted); font-size: 0.925rem;
     padding: 0.35rem 0 0.35rem 1.5rem;
-    position: relative;
-    line-height: 1.65;
+    position: relative; line-height: 1.65;
   }
-
-  .legal-section ul li::before {
-    content: '—';
-    position: absolute; left: 0;
-    color: var(--accent2);
-    font-size: 0.8rem;
-  }
-
+  .legal-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent2); font-size: 0.8rem; }
   .legal-note {
     background: var(--surface);
     border: 1px solid var(--border);
     border-left: 3px solid var(--accent);
     border-radius: 0 12px 12px 0;
-    padding: 1.25rem 1.5rem;
-    margin: 2rem 0;
+    padding: 1.25rem 1.5rem; margin: 2rem 0;
   }
-
-  .legal-note p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin: 0;
-    font-style: italic;
-  }
-
-  /* ── FOOTER ── */
+  .legal-note p { color: var(--text-muted); font-size: 0.85rem; margin: 0; font-style: italic; }
   footer {
     background: var(--surface);
     border-top: 1px solid var(--border);
-    padding: 2rem;
-    text-align: center;
+    padding: 2rem; text-align: center;
   }
-
-  footer p {
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    line-height: 1.8;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 2rem 0;
-  }
+  footer p { color: var(--text-dim); font-size: 0.8rem; line-height: 1.8; }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-brand" onclick="showSection('home')">
+  <div class="nav-brand" onclick="navigate('/')">
     <div class="nav-logo">AS</div>
     AutoSend
-  </a>
+  </div>
   <ul class="nav-links">
-    <li><a href="#" onclick="showSection('home')">Home</a></li>
-    <li><a href="#" onclick="showSection('privacy')">Privacy Policy</a></li>
-    <li><a href="#" onclick="showSection('terms')">Terms of Service</a></li>
-    <li><a href="#" onclick="showSection('support')">Support</a></li>
+    <li><a onclick="navigate('/')" id="nav-home">Home</a></li>
+    <li><a onclick="navigate('/privacy')" id="nav-privacy">Privacy Policy</a></li>
+    <li><a onclick="navigate('/terms')" id="nav-terms">Terms of Service</a></li>
+    <li><a onclick="navigate('/support')" id="nav-support">Support</a></li>
   </ul>
 </nav>
 
-<!-- ══ HOME ══════════════════════════════════════════════ -->
-<section id="home" class="active">
+<!-- HOME -->
+<section id="page-home">
   <div class="hero">
     <div class="hero-glow"></div>
     <div class="hero-badge"><span></span> Invite-Only Access · Google Workspace Add-on</div>
     <h1>Smarter Email Sending<br>for <em>Gmail™</em></h1>
     <p class="hero-sub">AutoSend for Gmail™ lets you send batch emails through your own Gmail™ account with configurable time delays — reducing spam and protecting your sender reputation.</p>
   </div>
-
   <div class="features">
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Custom Time Delays</h3>
-      <p>Set delays from 10 seconds to 10 minutes between each email. Simulate natural human sending behavior and stay out of spam folders.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔒</div>
-      <h3>Invite-Only Access</h3>
-      <p>No public signups. Access is granted exclusively by the administrator. Your tool stays private, controlled, and secure.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📬</div>
-      <h3>Gmail™ Native</h3>
-      <p>Works directly inside Gmail™ using Google's official Add-on framework. No browser extensions required — ever.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🛡️</div>
-      <h3>Google-Powered Security</h3>
-      <p>Authentication via Google OAuth 2.0™. We never see or store your password. All data stays within Google's infrastructure.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📊</div>
-      <h3>Progress Tracking</h3>
-      <p>Real-time progress counter shows how many emails have been sent and how many remain. Get a notification when the batch completes.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎛️</div>
-      <h3>Flexible Send Modes</h3>
-      <p>Choose from Fast, Normal, Safe, or fully Custom delay modes depending on your list size and deliverability requirements.</p>
-    </div>
+    <div class="feature-card"><div class="feature-icon">⚡</div><h3>Custom Time Delays</h3><p>Set delays from 10 seconds to 10 minutes between each email. Simulate natural human sending behavior and stay out of spam folders.</p></div>
+    <div class="feature-card"><div class="feature-icon">🔒</div><h3>Invite-Only Access</h3><p>No public signups. Access is granted exclusively by the administrator. Your tool stays private, controlled, and secure.</p></div>
+    <div class="feature-card"><div class="feature-icon">📬</div><h3>Gmail™ Native</h3><p>Works directly inside Gmail™ using Google's official Add-on framework. No browser extensions required — ever.</p></div>
+    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Google-Powered Security</h3><p>Authentication via Google OAuth 2.0™. We never see or store your password. All data stays within Google's infrastructure.</p></div>
+    <div class="feature-card"><div class="feature-icon">📊</div><h3>Progress Tracking</h3><p>Real-time progress counter shows how many emails have been sent and how many remain. Get a notification when the batch completes.</p></div>
+    <div class="feature-card"><div class="feature-icon">🎛️</div><h3>Flexible Send Modes</h3><p>Choose from Fast, Normal, Safe, or fully Custom delay modes depending on your list size and deliverability requirements.</p></div>
   </div>
-
   <div class="company-section">
     <h2>About Truellion Technologies</h2>
     <p>We build focused, private productivity tools for Gmail™ and Google Workspace™ — designed for professionals who need control, reliability, and privacy.</p>
     <div class="contact-card">
-      <div class="contact-row">
-        <span class="contact-label">Company</span>
-        <span class="contact-value">Truellion Technologies</span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">General</span>
-        <span class="contact-value"><a href="mailto:truellion2@gmail.com">truellion2@gmail.com</a></span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Support</span>
-        <span class="contact-value"><a href="mailto:truellion2@gmail.com">truellion2@gmail.com</a></span>
-      </div>
-      <div class="contact-row">
-        <span class="contact-label">Product</span>
-        <span class="contact-value">AutoSend for Gmail™ — Google Workspace Add-on</span>
-      </div>
+      <div class="contact-row"><span class="contact-label">Company</span><span class="contact-value">Truellion Technologies</span></div>
+      <div class="contact-row"><span class="contact-label">General</span><span class="contact-value"><a href="mailto:truellion2@gmail.com">truellion2@gmail.com</a></span></div>
+      <div class="contact-row"><span class="contact-label">Support</span><span class="contact-value"><a href="mailto:zaavian@truellion.com">zaavian@truellion.com</a></span></div>
+      <div class="contact-row"><span class="contact-label">Product</span><span class="contact-value">AutoSend for Gmail™ — Google Workspace™ Add-on</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══ PRIVACY POLICY ════════════════════════════════════ -->
-<section id="privacy">
+<!-- PRIVACY -->
+<section id="page-privacy">
   <div class="legal-wrap">
     <div class="legal-header">
       <div class="legal-tag">Legal</div>
       <h1>Privacy Policy</h1>
-      <p class="legal-meta">Effective Date: May 24, 2025 &nbsp;·&nbsp; Published by Truellion Technologies &nbsp;·&nbsp; Applies to: AutoSend for Gmail™</p>
+      <p class="legal-meta">Effective Date: May 24, 2025 &nbsp;·&nbsp; Truellion Technologies &nbsp;·&nbsp; AutoSend for Gmail™</p>
     </div>
-
-    <div class="legal-section">
-      <p>Truellion Technologies is committed to protecting your privacy. This Privacy Policy explains what information AutoSend for Gmail™ ("the Add-on") collects, how it is used, and how it is protected.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>1. Information We Collect</h2>
-      <p><strong style="color:var(--text)">Information you provide:</strong> When you are added to the Add-on whitelist by an administrator, we store your Gmail address solely to verify access authorization.</p>
-      <p><strong style="color:var(--text)">Information processed during use:</strong> When you send emails, the following data is temporarily processed within Google's infrastructure:</p>
-      <ul>
-        <li>Recipient email addresses you enter into the Add-on interface</li>
-        <li>Email subject and body content you compose</li>
-        <li>Your selected delay settings</li>
-        <li>Email queue state (stored temporarily in Google Apps Script™ PropertiesService)</li>
-      </ul>
-      <p>This data is deleted automatically once your email batch is fully sent.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>2. What We Do NOT Collect</h2>
-      <ul>
-        <li>Your Gmail™ password or account credentials</li>
-        <li>Copies of emails you send</li>
-        <li>Device information, IP addresses, or browser data</li>
-        <li>Analytics data (no Google Analytics, Firebase, or similar tools)</li>
-        <li>Payment information of any kind</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>3. How We Use Your Information</h2>
-      <ul>
-        <li>Verifying your Gmail™ address is authorized to use the Add-on</li>
-        <li>Processing your email send queue with your configured time delays</li>
-        <li>Sending you a completion notification when your batch finishes</li>
-        <li>Providing customer support when you contact us</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>4. Data Storage & Infrastructure</h2>
-      <p>The Add-on is built entirely on Google's official cloud infrastructure. We do not operate external servers or databases. All data lives within Google's ecosystem:</p>
-      <ul>
-        <li>Whitelist stored in Google Sheets™ or Google Apps Script™ PropertiesService</li>
-        <li>Email queue stored temporarily in Apps Script™ PropertiesService — deleted after batch completion</li>
-        <li>Authentication handled entirely by Google OAuth 2.0™ — we never see or store your Google password</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>5. Data Sharing</h2>
-      <p>We do not sell, rent, trade, or share your personal information with any third parties. Your data only interacts with Google's own services (Gmail API™, Apps Script™), which are governed by Google's Privacy Policy.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>6. Data Retention & Deletion</h2>
-      <p>Your Gmail address is retained on the whitelist only while your access remains active. To request deletion, email <a href="mailto:zaavian@truellion.com" style="color:var(--accent2)">zaavian@truellion.com</a> with the subject: <em>AutoSend Data Deletion Request</em>. We will process your request within 7 business days.</p>
-      <p>Note: Uninstalling the Add-on from your Google account also removes all locally stored Add-on data automatically.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>7. Google API Services User Data Policy</h2>
-      <p>The Add-on's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. We only request the minimum OAuth scopes necessary to perform email sending on your behalf.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>8. Contact Us</h2>
-      <ul>
-        <li>Company: Truellion Technologies</li>
-        <li>Email: truellion2@gmail.com</li>
-        <li>Data Deletion: zaavian@truellion.com</li>
-      </ul>
-    </div>
-
-    <div class="legal-note">
-      <p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p>
-    </div>
+    <div class="legal-section"><p>Truellion Technologies is committed to protecting your privacy. This Privacy Policy explains what information AutoSend for Gmail™ ("the Add-on") collects, how it is used, and how it is protected.</p></div>
+    <div class="legal-section"><h2>1. Information We Collect</h2><p><strong style="color:var(--text)">Information you provide:</strong> When you are added to the Add-on whitelist by an administrator, we store your Gmail address solely to verify access authorization.</p><p><strong style="color:var(--text)">Information processed during use:</strong></p><ul><li>Recipient email addresses you enter into the Add-on interface</li><li>Email subject and body content you compose</li><li>Your selected delay settings</li><li>Email queue state (stored temporarily in Google Apps Script™ PropertiesService — deleted after batch completes)</li></ul></div>
+    <div class="legal-section"><h2>2. What We Do NOT Collect</h2><ul><li>Your Gmail™ password or account credentials</li><li>Copies of emails you send</li><li>Device information, IP addresses, or browser data</li><li>Analytics data (no Google Analytics, Firebase, or similar tools)</li><li>Payment information of any kind</li></ul></div>
+    <div class="legal-section"><h2>3. How We Use Your Information</h2><ul><li>Verifying your Gmail™ address is authorized to use the Add-on</li><li>Processing your email send queue with your configured time delays</li><li>Sending you a completion notification when your batch finishes</li><li>Providing customer support when you contact us</li></ul></div>
+    <div class="legal-section"><h2>4. Data Storage & Infrastructure</h2><p>The Add-on is built entirely on Google's official cloud infrastructure. We do not operate external servers or databases.</p><ul><li>Whitelist stored in Google Sheets™ or Google Apps Script™ PropertiesService</li><li>Email queue stored temporarily in Apps Script™ PropertiesService — deleted after batch completion</li><li>Authentication handled entirely by Google OAuth 2.0™ — we never see or store your Google password</li></ul></div>
+    <div class="legal-section"><h2>5. Data Sharing</h2><p>We do not sell, rent, trade, or share your personal information with any third parties. Your data only interacts with Google's own services (Gmail API™, Apps Script™), governed by Google's Privacy Policy.</p></div>
+    <div class="legal-section"><h2>6. Data Retention & Deletion</h2><p>Your Gmail address is retained only while your access is active. To request deletion, email <a href="mailto:zaavian@truellion.com" style="color:var(--accent2)">zaavian@truellion.com</a> with subject: <em>AutoSend Data Deletion Request</em>. We process requests within 7 business days. Uninstalling the Add-on also removes all locally stored data automatically.</p></div>
+    <div class="legal-section"><h2>7. Google API Services User Data Policy</h2><p>The Add-on's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. We only request the minimum OAuth scopes necessary to perform email sending on your behalf.</p></div>
+    <div class="legal-section"><h2>8. Contact Us</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Data Deletion: zaavian@truellion.com</li></ul></div>
+    <div class="legal-note"><p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p></div>
   </div>
 </section>
 
-<!-- ══ TERMS OF SERVICE ══════════════════════════════════ -->
-<section id="terms">
+<!-- TERMS -->
+<section id="page-terms">
   <div class="legal-wrap">
     <div class="legal-header">
       <div class="legal-tag">Legal</div>
       <h1>Terms of Service</h1>
-      <p class="legal-meta">Effective Date: May 24, 2025 &nbsp;·&nbsp; Published by Truellion Technologies &nbsp;·&nbsp; Applies to: AutoSend for Gmail™</p>
+      <p class="legal-meta">Effective Date: May 24, 2025 &nbsp;·&nbsp; Truellion Technologies &nbsp;·&nbsp; AutoSend for Gmail™</p>
     </div>
-
-    <div class="legal-section">
-      <p>By installing, accessing, or using AutoSend for Gmail™ ("the Add-on"), you agree to be bound by these Terms of Service. If you do not agree, you must not install or use the Add-on.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>1. Description of Service</h2>
-      <p>AutoSend for Gmail™ is a Google Workspace™ Add-on that enables authorized users to send batch emails through their own Gmail™ account using Gmail API™ with configurable time delays between each email. The Add-on operates entirely within Google's official framework using Google Apps Script™ and OAuth 2.0 authorization.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>2. Invite-Only Access</h2>
-      <p>Access is strictly invite-only. You may only use the Add-on if your Gmail address has been explicitly whitelisted by an authorized administrator of Truellion Technologies.</p>
-      <ul>
-        <li>You must not share your install link with others</li>
-        <li>You must not attempt to bypass the whitelist access control</li>
-        <li>Your access may be revoked at any time at the administrator's sole discretion</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>3. Permitted Use</h2>
-      <p>You agree to use the Add-on only for lawful purposes and in compliance with Google's Terms of Service and Gmail™ Usage Policies. You must not:</p>
-      <ul>
-        <li>Use the Add-on to send spam or unsolicited bulk emails</li>
-        <li>Use the Add-on for illegal, fraudulent, or deceptive activities</li>
-        <li>Attempt to exceed Gmail API™ sending limits or circumvent Google's policies</li>
-        <li>Reverse engineer, copy, modify, or redistribute the Add-on</li>
-        <li>Use the service to harass, abuse, or harm any individual or entity</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>4. Gmail API™ Sending Limits</h2>
-      <p>The Add-on operates within Google's official sending limits enforced by Google:</p>
-      <ul>
-        <li>Free Gmail™ accounts: maximum 500 emails per day</li>
-        <li>Google Workspace™ accounts: maximum 2,000 emails per day</li>
-      </ul>
-      <p>Exceeding these limits may result in temporary suspension of your Gmail™ account by Google. We are not responsible for account restrictions imposed by Google.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>5. No Spam Guarantee</h2>
-      <p>While the Add-on includes configurable time-delay features to reduce the likelihood of triggering spam filters, we do not guarantee that emails sent will not be marked as spam. Email deliverability depends on many factors including content, recipient server policies, and sender reputation.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>6. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, Truellion Technologies shall not be liable for any indirect, incidental, or consequential damages including:</p>
-      <ul>
-        <li>Loss of data or emails</li>
-        <li>Gmail™ account suspension by Google</li>
-        <li>Financial losses resulting from use or inability to use the service</li>
-        <li>Emails being marked as spam by recipient servers</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>7. Termination</h2>
-      <p>We reserve the right to revoke your access at any time, with or without notice, for any violation of these Terms. Upon termination, all data associated with your account will be deleted.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>8. Changes to These Terms</h2>
-      <p>We may update these Terms from time to time. Continued use of the Add-on after changes constitutes acceptance of the revised Terms.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>9. Contact Information</h2>
-      <ul>
-        <li>Company: Truellion Technologies</li>
-        <li>Email: truellion2@gmail.com</li>
-        <li>Support: zaavian@truellion.com</li>
-      </ul>
-    </div>
-
-    <div class="legal-note">
-      <p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p>
-    </div>
+    <div class="legal-section"><p>By installing, accessing, or using AutoSend for Gmail™ ("the Add-on"), you agree to be bound by these Terms of Service. If you do not agree, you must not install or use the Add-on.</p></div>
+    <div class="legal-section"><h2>1. Description of Service</h2><p>AutoSend for Gmail™ is a Google Workspace™ Add-on that enables authorized users to send batch emails through their own Gmail™ account using Gmail API™ with configurable time delays. The Add-on operates entirely within Google's official framework using Google Apps Script™ and OAuth 2.0 authorization.</p></div>
+    <div class="legal-section"><h2>2. Invite-Only Access</h2><p>Access is strictly invite-only. You may only use the Add-on if your Gmail address has been explicitly whitelisted by an authorized administrator of Truellion Technologies.</p><ul><li>You must not share your install link with others</li><li>You must not attempt to bypass the whitelist access control</li><li>Your access may be revoked at any time at the administrator's sole discretion</li></ul></div>
+    <div class="legal-section"><h2>3. Permitted Use</h2><p>You agree to use the Add-on only for lawful purposes and in compliance with Google's Terms of Service and Gmail™ Usage Policies. You must not:</p><ul><li>Use the Add-on to send spam or unsolicited bulk emails</li><li>Use the Add-on for illegal, fraudulent, or deceptive activities</li><li>Attempt to exceed Gmail API™ sending limits or circumvent Google's policies</li><li>Reverse engineer, copy, modify, or redistribute the Add-on</li><li>Use the service to harass, abuse, or harm any individual or entity</li></ul></div>
+    <div class="legal-section"><h2>4. Gmail API™ Sending Limits</h2><ul><li>Free Gmail™ accounts: maximum 500 emails per day</li><li>Google Workspace™ accounts: maximum 2,000 emails per day</li></ul><p>Exceeding these limits may result in temporary suspension by Google. We are not responsible for account restrictions imposed by Google.</p></div>
+    <div class="legal-section"><h2>5. No Spam Guarantee</h2><p>While the Add-on includes configurable time-delay features to reduce the likelihood of triggering spam filters, we do not guarantee that emails will not be marked as spam. Deliverability depends on content, recipient server policies, and sender reputation.</p></div>
+    <div class="legal-section"><h2>6. Limitation of Liability</h2><p>To the maximum extent permitted by law, Truellion Technologies shall not be liable for:</p><ul><li>Loss of data or emails</li><li>Gmail™ account suspension by Google</li><li>Financial losses from use or inability to use the service</li><li>Emails being marked as spam by recipient servers</li></ul></div>
+    <div class="legal-section"><h2>7. Termination</h2><p>We reserve the right to revoke your access at any time for any violation of these Terms. Upon termination, all data associated with your account will be deleted.</p></div>
+    <div class="legal-section"><h2>8. Changes to These Terms</h2><p>We may update these Terms from time to time. Continued use after changes constitutes acceptance of the revised Terms.</p></div>
+    <div class="legal-section"><h2>9. Contact Information</h2><ul><li>Company: Truellion Technologies</li><li>Email: truellion2@gmail.com</li><li>Support: zaavian@truellion.com</li></ul></div>
+    <div class="legal-note"><p>Gmail™, Google Workspace™, Google Apps Script™, and Gmail API™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with, endorsed by, or sponsored by Google LLC.</p></div>
   </div>
 </section>
 
-<!-- ══ SUPPORT ════════════════════════════════════════════ -->
-<section id="support">
+<!-- SUPPORT -->
+<section id="page-support">
   <div class="legal-wrap">
     <div class="legal-header">
       <div class="legal-tag">Help</div>
       <h1>Support Center</h1>
       <p class="legal-meta">AutoSend for Gmail™ &nbsp;·&nbsp; Truellion Technologies &nbsp;·&nbsp; Response within 24–48 hours</p>
     </div>
-
-    <div class="legal-section">
-      <h2>Contact Information</h2>
-      <ul>
-        <li>General inquiries: truellion2@gmail.com</li>
-        <li>Data deletion & privacy: zaavian@truellion.com</li>
-        <li>Response time: within 24–48 business hours</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>How to Get Support</h2>
-      <p>Email truellion2@gmail.com with the following:</p>
-      <ul>
-        <li>Your Gmail™ address used with the Add-on</li>
-        <li>A clear description of the issue</li>
-        <li>Screenshots if applicable</li>
-        <li>Date and time when the issue occurred</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>AutoSend button not appearing in Gmail™?</h2>
-      <p>Complete the installation by clicking the install link and approving all OAuth permissions. Refresh Gmail™ (press F5). If the issue persists, uninstall and reinstall the Add-on from Google Workspace Marketplace™.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Emails going to spam?</h2>
-      <p>Use Safe Mode (5–10 minute delays) for large lists. Avoid spam trigger words in your subject or body. Start with small batches to build sender reputation.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Access Denied message?</h2>
-      <p>Your Gmail™ address may not be on the authorized whitelist, or your access may have been revoked. Contact truellion2@gmail.com to verify your access status.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2>Daily sending limits</h2>
-      <ul>
-        <li>Free Gmail™ accounts: 500 emails per day (Google's limit)</li>
-        <li>Google Workspace™ accounts: 2,000 emails per day (Google's limit)</li>
-      </ul>
-    </div>
-
-    <div class="legal-section">
-      <h2>Data Opt-Out & Deletion Request</h2>
-      <p>To request removal of your data:</p>
-      <ul>
-        <li>Email: zaavian@truellion.com</li>
-        <li>Subject: AutoSend Data Deletion Request</li>
-        <li>Include: Your Gmail™ address and reason</li>
-      </ul>
-      <p>We will process your request within 7 business days. Note: Uninstalling the Add-on also removes all Add-on data from Google's infrastructure automatically.</p>
-    </div>
-
-    <div class="legal-note">
-      <p>Gmail™ and Google Workspace™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with or endorsed by Google LLC.</p>
-    </div>
+    <div class="legal-section"><h2>Contact Information</h2><ul><li>General inquiries: truellion2@gmail.com</li><li>Data deletion & privacy: zaavian@truellion.com</li><li>Response time: within 24–48 business hours</li></ul></div>
+    <div class="legal-section"><h2>How to Get Support</h2><p>Email truellion2@gmail.com with the following:</p><ul><li>Your Gmail™ address used with the Add-on</li><li>A clear description of the issue</li><li>Screenshots if applicable</li><li>Date and time when the issue occurred</li></ul></div>
+    <div class="legal-section"><h2>AutoSend button not appearing in Gmail™?</h2><p>Complete the installation and approve all OAuth permissions. Refresh Gmail™ (press F5). If the issue persists, uninstall and reinstall the Add-on from Google Workspace Marketplace™.</p></div>
+    <div class="legal-section"><h2>Emails going to spam?</h2><p>Use Safe Mode (5–10 minute delays) for large lists. Avoid spam trigger words in your subject or body. Start with small batches to build sender reputation.</p></div>
+    <div class="legal-section"><h2>Access Denied message?</h2><p>Your Gmail™ address may not be on the authorized whitelist, or your access may have been revoked. Contact truellion2@gmail.com to verify your access status.</p></div>
+    <div class="legal-section"><h2>Daily sending limits</h2><ul><li>Free Gmail™ accounts: 500 emails per day (Google's limit)</li><li>Google Workspace™ accounts: 2,000 emails per day (Google's limit)</li></ul></div>
+    <div class="legal-section"><h2>Data Opt-Out & Deletion Request</h2><p>To request removal of your data:</p><ul><li>Email: zaavian@truellion.com</li><li>Subject: AutoSend Data Deletion Request</li><li>Include: Your Gmail™ address and reason</li></ul><p>We will process your request within 7 business days. Uninstalling the Add-on also removes all Add-on data from Google's infrastructure automatically.</p></div>
+    <div class="legal-note"><p>Gmail™ and Google Workspace™ are trademarks of Google LLC. AutoSend for Gmail™ is developed by Truellion Technologies and is not affiliated with or endorsed by Google LLC.</p></div>
   </div>
 </section>
 
@@ -725,12 +359,32 @@
 </footer>
 
 <script>
-  function showSection(id) {
-    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0, 0);
-    return false;
+  const routes = {
+    '/':        'home',
+    '/privacy': 'privacy',
+    '/terms':   'terms',
+    '/support': 'support'
+  };
+
+  function navigate(path) {
+    window.history.pushState({}, '', path);
+    render(path);
   }
+
+  function render(path) {
+    const page = routes[path] || 'home';
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active-link'));
+    const navEl = document.getElementById('nav-' + page);
+    if (navEl) navEl.classList.add('active-link');
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('popstate', () => render(window.location.pathname));
+
+  // Render on load based on current URL path
+  render(window.location.pathname);
 </script>
 </body>
 </html>
