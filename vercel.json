@@ -1,8 +1,8 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/privacy", "destination": "/index.html" },
-    { "source": "/terms",   "destination": "/index.html" },
-    { "source": "/support", "destination": "/index.html" }
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms",   "destination": "/terms.html"   },
+    { "source": "/support", "destination": "/index.html"   }
   ]
 }
